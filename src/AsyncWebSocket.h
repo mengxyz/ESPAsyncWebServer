@@ -318,6 +318,10 @@ class AsyncWebSocket: public AsyncWebHandler {
       _eventHandler = handler;
     }
 
+    void setCustomHandler(AwsHandshakeHandler handler){
+      _handshakeHandler = handler;
+    }
+
     //system callbacks (do not call)
     uint32_t _getNextId(){ return _cNextId++; }
     void _addClient(AsyncWebSocketClient * client);
